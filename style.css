@@ -48,7 +48,7 @@ body {
 }
 
 .description {
-    color: #aaaaaa;
+    color: #888888;
     font-size: 14px;
     line-height: 1.7;
     margin-top: 15px;
@@ -70,7 +70,7 @@ body {
     padding: 22px 24px;
 
     background: #111111;
-    border: 1px solid #1e4934;
+    border: 1px solid #252525;
     border-radius: 8px;
 
     color: #ffffff;
@@ -100,7 +100,7 @@ body {
 
 /* HOVER EFFECT */
 .menu-button:hover {
-    background: #12251b;
+    background: #142019;
     border-color: #36d68b;
     transform: translateY(-3px);
 }
@@ -119,9 +119,9 @@ footer {
     margin-top: 65px;
     padding-top: 20px;
 
-    border-top: 1px solid #203b2c;
+    border-top: 1px solid #222222;
 
-    color: #777777;
+    color: #555555;
     font-size: 9px;
     letter-spacing: 1.5px;
 }
