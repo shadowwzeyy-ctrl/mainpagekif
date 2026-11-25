@@ -1,193 +1,153 @@
 
+/* GENERAL */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root {
-    --background: #07130d;
-    --surface: #10251a;
-    --green: #36d68b;
-    --text: #f0f7f2;
-    --muted: #8da596;
-    --border: rgba(54, 214, 139, 0.16);
-}
-
 body {
     min-height: 100vh;
-    background:
-        radial-gradient(circle at 50% 0%, #143c28 0%, transparent 45%),
-        var(--background);
-    color: var(--text);
-    font-family: 'DM Sans', sans-serif;
+    background: #080808;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
 
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
     padding: 30px 20px;
 }
 
+/* MAIN CONTAINER */
 .container {
     width: 100%;
-    max-width: 520px;
+    max-width: 650px;
 }
 
-/* PROFILE */
-
-.profile {
-    text-align: center;
-    margin-bottom: 35px;
+/* HEADER */
+.header {
+    margin-bottom: 55px;
 }
 
-.logo {
-    width: 58px;
-    height: 58px;
-    margin: 0 auto 25px;
+.subtitle {
+    color: #36d68b;
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: var(--green);
-    color: #07130d;
-
-    font-size: 25px;
+.header h1 {
+    font-size: clamp(35px, 8vw, 58px);
     font-weight: 800;
-    border-radius: 16px;
+    letter-spacing: -2px;
 }
 
-.greeting {
-    color: var(--green);
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    margin-bottom: 15px;
-}
-
-h1 {
-    font-size: clamp(30px, 7vw, 42px);
-    font-weight: 800;
-    letter-spacing: -1.5px;
-    line-height: 1.2;
-}
-
-h1 span {
-    color: var(--green);
+.header h1 span {
+    color: #36d68b;
 }
 
 .description {
-    color: var(--muted);
-    font-size: 13px;
-    line-height: 1.9;
+    color: #aaaaaa;
+    font-size: 14px;
+    line-height: 1.7;
     margin-top: 15px;
 }
 
-/* DIVIDER */
-
-.divider {
-    width: 45px;
-    height: 2px;
-    background: var(--green);
-    margin: 0 auto 30px;
-    opacity: 0.7;
-}
-
-/* LINKS */
-
-.links {
+/* MENU BUTTONS */
+.menu {
     display: flex;
     flex-direction: column;
-    gap: 13px;
+    gap: 14px;
 }
 
-.link-card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 21px 23px;
-
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-
-    color: var(--text);
-    text-decoration: none;
-
-    transition: 0.25s ease;
-}
-
-.link-card:hover {
-    background: #173725;
-    border-color: var(--green);
-    transform: translateY(-3px);
-}
-
-.link-info {
+.menu-button {
     display: flex;
     align-items: center;
     gap: 20px;
+
+    width: 100%;
+    padding: 22px 24px;
+
+    background: #111111;
+    border: 1px solid #1e4934;
+    border-radius: 8px;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    transition: 0.3s ease;
 }
 
 .number {
-    color: var(--green);
-    font-size: 11px;
-    font-weight: 700;
-    opacity: 0.8;
+    color: #36d68b;
+    font-size: 12px;
+    letter-spacing: 1px;
 }
 
-.link-title {
-    font-size: 14px;
-    font-weight: 700;
+.button-text {
+    flex: 1;
+    font-size: 13px;
+    font-weight: 600;
     letter-spacing: 1.5px;
 }
 
 .arrow {
-    color: var(--green);
+    color: #36d68b;
     font-size: 20px;
-    transition: 0.25s;
+    transition: 0.3s ease;
 }
 
-.link-card:hover .arrow {
+/* HOVER EFFECT */
+.menu-button:hover {
+    background: #12251b;
+    border-color: #36d68b;
+    transform: translateY(-3px);
+}
+
+.menu-button:hover .arrow {
+    color: #ffffff;
     transform: translate(3px, -3px);
 }
 
 /* FOOTER */
-
 footer {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
+    gap: 15px;
 
-    margin-top: 45px;
+    margin-top: 65px;
     padding-top: 20px;
 
-    border-top: 1px solid var(--border);
+    border-top: 1px solid #203b2c;
 
-    color: #647d6d;
+    color: #777777;
     font-size: 9px;
-    font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
+}
+
+footer span {
+    color: #36d68b;
 }
 
 /* MOBILE */
-
 @media (max-width: 480px) {
-    body {
-        padding: 25px 20px;
+    .header {
+        margin-bottom: 40px;
     }
 
-    .profile {
-        margin-bottom: 30px;
+    .menu-button {
+        padding: 19px 16px;
+        gap: 14px;
     }
 
-    .link-card {
-        padding: 19px;
+    .button-text {
+        font-size: 11px;
+        letter-spacing: 1px;
     }
 
     footer {
-        font-size: 8px;
+        flex-direction: column;
+        font-size: 9px;
     }
 }
